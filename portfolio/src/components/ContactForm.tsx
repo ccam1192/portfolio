@@ -11,10 +11,32 @@ export default function ContactForm() {
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    setSubmitting(true);
+    setError(false);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mdapwdvr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -98,11 +120,18 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-sm text-red-500 dark:text-red-400">
+          Something went wrong. Please try again or email me directly.
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors shadow-lg shadow-primary-600/25"
+        disabled={submitting}
+        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium transition-colors shadow-lg shadow-primary-600/25"
       >
-        Send Message
+        {submitting ? "Sending..." : "Send Message"}
         <Send size={16} />
       </button>
     </form>
