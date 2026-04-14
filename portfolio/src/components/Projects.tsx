@@ -60,7 +60,6 @@ const builtProjects = [
       "Amazon FBA",
       "Shopify",
       "E-Commerce",
-      "Product Sourcing",
       "PPC Advertising",
     ],
   },
