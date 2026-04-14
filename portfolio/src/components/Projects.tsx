@@ -1,7 +1,7 @@
 import FadeIn from "./FadeIn";
 import ProjectCard from "./ProjectCard";
 
-const projects = [
+const builtProjects = [
   {
     title: "Boardroom",
     description:
@@ -65,12 +65,21 @@ const projects = [
     ],
   },
   {
-    title: "What's Next",
+    title: "Charitably",
     description:
-      "I'm always building. Boardroom continues to evolve, and I'm also exploring a few personal projects, including a Predictions Market Trading Assistant and an app to help a charitable organization manage donations and contacts.",
-    placeholder: true,
+      "Charitably is an in-progress SaaS platform designed to help St. Vincent de Paul conferences manage neighbor casework, track visits, and organize assistance in one place. With over 8,000 conferences across the U.S. still relying on manual or fragmented systems, the product is being built to modernize and streamline their operations.",
+    tags: ["SaaS", "Nonprofit", "Casework", "St. Vincent de Paul"],
+    link: "https://charitably-dusky.vercel.app/",
+    linkLabel: "Visit Charitably",
   },
 ];
+
+const whatsNext = {
+  title: "What's Next",
+  description:
+    "I'm always building. Boardroom continues to evolve, and Charitably is in active development as a work in progress. I'm also exploring a Predictions Market Trading Assistant and other ideas.",
+  placeholder: true,
+};
 
 export default function Projects() {
   return (
@@ -89,11 +98,17 @@ export default function Projects() {
         </FadeIn>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, i) => (
+          {builtProjects.map((project, i) => (
             <FadeIn key={project.title} delay={i * 100}>
               <ProjectCard {...project} />
             </FadeIn>
           ))}
+        </div>
+
+        <div className="mt-12 md:mt-14">
+          <FadeIn delay={builtProjects.length * 100}>
+            <ProjectCard {...whatsNext} />
+          </FadeIn>
         </div>
       </div>
     </section>
