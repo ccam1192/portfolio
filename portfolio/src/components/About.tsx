@@ -38,7 +38,7 @@ const tools = [
 ];
 
 const pmSkills = [
-  "Roadmapping",
+  "Roadmapping & Product Vision",
   "Product Specification Writing",
   "Agile Backlog Management",
   "Data Analysis",

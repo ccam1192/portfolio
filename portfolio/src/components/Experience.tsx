@@ -9,10 +9,10 @@ const experiences = [
     link: "https://boardroom.cx",
     bullets: [
       "Conceived, designed, and launched a SaaS analytics dashboard for e-commerce brands integrating key data sources, automated reporting, and AI-driven SEO tools.",
-      "Scaled from concept to 1,200+ paying customers and $110K+ in revenue.",
+      "Scaled from concept to 1,200+ paying customers and 3,500+ users.",
       "Managed a cross-functional team of developers, QA testers, UX/UI designers, salespeople, and freelancers.",
       "Defined and prioritized the product roadmap, wrote detailed specs with Jira, and analyzed customer feedback and usage data to guide development.",
-      "Built and maintained integrations with Shopify, Amazon Seller Central, Amazon Ads, QuickBooks, Meta for Business, TikTok, Google Ads, GA4, Photoroom, and OpenAI.",
+      "Built and maintained integrations with Shopify, Amazon Seller Central, Amazon Ads, QuickBooks, Xero, Meta for Business, TikTok, Google Ads, GA4, Photoroom, and OpenAI.",
       "Launched agentic autoblogger, AI-powered SEO, dynamic data visualization, and automated email reporting features.",
       "Developed a white-labeled version of the platform for accounting firms and marketing agencies.",
       "Drove 150K+ YouTube views and thousands of monthly website visits via SEO, influencer partnerships, and content marketing.",

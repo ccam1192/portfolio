@@ -8,7 +8,7 @@ const projects = [
       "AI-powered analytics and SEO platform for e-commerce brands. Conceived, designed, and launched a SaaS dashboard integrating key data sources, automated reporting, and AI-driven content creation and SEO tools.",
     kpis: [
       { label: "Paying Customers", value: "1,200+" },
-      { label: "ARR", value: "$60K" },
+      { label: "Users", value: "3,500+" },
       { label: "YouTube Views", value: "150K+" },
       { label: "Client Traffic Growth", value: "10x" },
     ],
